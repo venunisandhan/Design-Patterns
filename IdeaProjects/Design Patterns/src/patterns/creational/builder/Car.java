@@ -42,7 +42,12 @@ public class Car {
         return navigationSystem;
     }
 
-    class CarBuilder {
+    public String toString()
+    {
+        return engine + " " + wheels + " " + seats + " " + color + " " + sunroof + " " + navigationSystem;
+    }
+
+    static class CarBuilder {
 
         String engine;
         //Default values
@@ -72,7 +77,7 @@ public class Car {
             return this;
         }
 
-        public CarBuilder setRunroof(boolean sunroof) {
+        public CarBuilder setSunroof(boolean sunroof) {
             this.sunroof = sunroof;
             return this;
         }
@@ -85,6 +90,5 @@ public class Car {
         public Car build() {
             return new Car(this);
         }
-
     }
 }
