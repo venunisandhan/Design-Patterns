@@ -7,7 +7,7 @@ public class   Main {
         Car.CarBuilder builder = new Car.CarBuilder();
 
         Car car1 = builder.setEngine("V8")
-                .setColor("Red")
+                .setColor("  Red")
                 .setSunroof(true)
                 .build();
 
