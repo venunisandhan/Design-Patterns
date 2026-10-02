@@ -12,11 +12,17 @@ public class Main {
 
         PaymentStrategy stripe = new StripePayment();
 
+        PaymentStrategy venmo = new VenmoPayment();
+
         PaymentProcessor processor = new PaymentProcessor(creditCard); //initially
 
         processor.processPayment();
 
         processor.setPaymentStrategy(crypto);
+
+        processor.processPayment();
+
+        processor.setPaymentStrategy(venmo);
 
         processor.processPayment();
     }
