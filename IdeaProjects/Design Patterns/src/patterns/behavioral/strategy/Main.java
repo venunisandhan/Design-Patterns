@@ -14,6 +14,8 @@ public class Main {
 
         PaymentStrategy venmo = new VenmoPayment();
 
+        PaymentStrategy zCash = new ZCashPayment();
+
         PaymentProcessor processor = new PaymentProcessor(creditCard); //initially
 
         processor.processPayment();
@@ -23,6 +25,10 @@ public class Main {
         processor.processPayment();
 
         processor.setPaymentStrategy(venmo);
+
+        processor.processPayment();
+
+        processor.setPaymentStrategy(zCash);
 
         processor.processPayment();
     }
